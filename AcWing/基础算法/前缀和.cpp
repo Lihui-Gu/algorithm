@@ -1,3 +1,12 @@
+/*
+ * @Author: 顾立辉 glh9803@outlook.com
+ * @Date: 2022-05-17 12:52:26
+ * @LastEditors: 顾立辉 glh9803@outlook.com
+ * @LastEditTime: 2022-05-18 08:57:28
+ * @FilePath: \AcWing\基础算法\前缀和.cpp
+ * @Description: 前缀和的模板
+ */
+
 #include <iostream>
 using namespace std;
 

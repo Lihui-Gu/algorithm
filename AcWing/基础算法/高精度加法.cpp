@@ -1,3 +1,14 @@
+/*
+ * @Author: 顾立辉 glh9803@outlook.com
+ * @Date: 2022-05-17 12:29:09
+ * @LastEditors: 顾立辉 glh9803@outlook.com
+ * @LastEditTime: 2022-05-18 09:10:22
+ * @FilePath: \AcWing\基础算法\高精度加法.cpp
+ * @Description: 高精度加法的模板
+ * 
+ * Copyright (c) 2022 by 顾立辉 glh9803@outlook.com, All Rights Reserved. 
+ */
+
 #include <iostream>
 #include <vector>
 #include <cstring>
@@ -17,7 +28,6 @@ vector<int> add(vector<int>&A, vector<int>&B)
     if(t) C.push_back(1);
     return C;
 }
-
 
 int main()
 {

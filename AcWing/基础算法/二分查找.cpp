@@ -1,3 +1,15 @@
+/*
+ * @Author: 顾立辉 glh9803@outlook.com
+ * @Date: 2022-05-16 11:07:59
+ * @LastEditors: 顾立辉 glh9803@outlook.com
+ * @LastEditTime: 2022-05-18 09:09:20
+ * @FilePath: \AcWing\基础算法\二分查找.cpp
+ * @Description: 二分查找的模板
+ * 
+ * Copyright (c) 2022 by 顾立辉 glh9803@outlook.com, All Rights Reserved. 
+ */
+
+
 #include <iostream>
 using namespace std;
 const int N = 100010;
