@@ -2,7 +2,7 @@
  * @Author: 顾立辉 glh9803@outlook.com
  * @Date: 2022-05-08 18:30:01
  * @LastEditors: 顾立辉 glh9803@outlook.com
- * @LastEditTime: 2022-05-18 09:09:55
+ * @LastEditTime: 2022-06-01 22:15:25
  * @FilePath: \AcWing\基础算法\归并排序.cpp
  * @Description: 排序——归并排序
  * 
@@ -10,31 +10,37 @@
  */
 
 #include <iostream>
+#include <cstring>
+#include <algorithm>
 using namespace std;
-int n;
+
 const int N = 100010;
-int q[N], tmp[N];
+int a[N], tmp[N];
+
 void merge_sort(int q[], int l, int r)
 {
-    if(l >= r) return;
+    if(l >= r)  return;
     int mid = l + r >> 1;
+    int i = l, j = mid + 1, k = 0;
     merge_sort(q, l, mid), merge_sort(q, mid + 1, r);
-    int k = 0, i = l, j = mid + 1;
-    while(i <= mid && j <= r)
+    while(i <= mid & j <= r)
     {
-        if(q[i] <= q[j]) tmp[k ++] = q[i ++];
-        else  tmp[k ++] = q[j ++];
+        if(q[i] <= q[j])  tmp[k ++] = q[i ++];
+        else tmp[k ++] = q[j ++];
     }
     while(i <= mid) tmp[k ++] = q[i ++];
     while(j <= r) tmp[k ++] = q[j ++];
-    for(int i = l, j = 0; i <= r; i ++, j ++) q[i] = tmp[j]; 
+    for(i = l, j = 0; i <= r; i ++, j ++ )  q[i] = tmp[j];
 }
+
 
 int main()
 {
-    scanf("%d", &n);
-    for(int i = 0; i < n; i ++)  scanf("%d", &q[i]);
-    merge_sort(q, 0 ,n - 1);
-    for(int i = 0; i < n; i ++)  printf("%d ", q[i]);
+    int n;
+    cin >> n;
+    for(int i = 0; i < n; i ++) scanf("%d", &a[i]);
+    merge_sort(a, 0, n - 1);
+    printf("%d", a[0]);
+    for(int i = 1; i < n; i ++) printf(" %d", a[i]);
     return 0;
 }
